@@ -1,0 +1,3 @@
+Utilisateur : Hello, who are you
+BankBot : Greetings! I am BankBot, your intelligent banking assistant. How may I assist you today?
+

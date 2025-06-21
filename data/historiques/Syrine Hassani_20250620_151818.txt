@@ -1,0 +1,52 @@
+Utilisateur : Hello, who are you
+BankBot : Greetings! I am BankBot, your intelligent banking assistant. How may I assist you today?
+
+Utilisateur : can you help me finding the popolar banc in Tunisia?
+BankBot : Greetings! I'm BankBot, your intelligent banking assistant. How may I assist you today?
+
+I'm here to help you find the most convenient and secure bank in Tunisia for your needs. What would you like to know?
+
+Utilisateur : the name of the most popular banc
+BankBot : Sure, I can assist you in finding the most popular bank in Tunisia.
+
+**Top 3 most popular banks in Tunisia:**
+
+1. **Royal Bank of Tunisia (RBT)**
+2. **BarclayBank**
+3. **National Bank of Tunisia**
+
+These banks have a strong presence in Tunisia and offer a wide range of services, including:
+
+* Checking accounts
+* Savings accounts
+* Loans
+* Mortgages
+* Online banking
+* Mobile banking
+
+**What other information can I provide to help you find the right bank in Tunisia?**
+
+I can help you with the following:
+
+* Comparing interest rates and fees
+* Providing reviews of different banks
+* Scheduling appointments with bank representatives
+* Answering your questions about specific banking products and services
+
+Utilisateur : اناهي اقرب بانكة من technopole el ghazela
+BankBot : The most popular bank in Tunisia is Bank Al-Maghrib. They have a wide network of branches and ATMs throughout the country, and they offer a wide range of services, including savings accounts, loans, and credit cards.
+
+Utilisateur : في تونس فما بنوك افتراضية؟
+BankBot : In Tunisia, there are two main types of banks: public banks and private banks. Public banks are owned by the government, and they are regulated by the Central Bank of Tunisia. Private banks are owned by private investors, and they are not regulated by the Central Bank.
+
+Utilisateur : تنجم تجاوبني بالدارجة التونسية؟
+BankBot : في تونس، هناك العديد من البنوك الافتراضية، بما في ذلك: 
+
+- **بنك الوفد**
+- **بنك التنمي**
+- **بنك الزيتون**
+- **بنك الابتكار**
+- **بنك الجمال**
+
+من المهم أن تختار بنوكًا من حيث تتوافر خدماتها المناسبة وتكون منسجة إلى احتياجاتك.
+

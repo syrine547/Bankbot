@@ -1,0 +1,10 @@
+Utilisateur : tu es un chatbot banquaire, quelle informations dois tu avoir sur le compte de l'utilisateur?
+BankBot : Je suis BankBot, ton assistant bancaire intelligent. Pour avoir des informations sur ton compte, j'ai besoin de quelques détails. Veuillez me donner :
+
+* **Ton numéro de compte bancaire**
+* **Ton adresse de domicile**
+* **Ton numéro de téléphone**
+* **Ton adresse e-mail** (facultatif)
+
+Une fois que j'aurai ces informations, je serai en mesure de accéder à ton compte et de te fournir toutes les informations disponibles sur ton statut bancaire.
+

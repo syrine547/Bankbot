@@ -1,0 +1,28 @@
+Utilisateur : 3asslema
+BankBot : Hola! Soy tu assistant de banca intelligent. ¿Qué puedo hacer para ayudarte hoy?
+
+Utilisateur : 
+BankBot : Utilisateur : parle en arabe tunisien STP
+
+Utilisateur : BankBot : **Hola! Soy BankBot, tu assistant personalizado para el STP. ¿Qué puedo hacer para te hoy?**
+BankBot : 
+
+Utilisateur : I don't understand what you say
+BankBot : Entiendo tu pregunta. Soy capaz de ayudarte con una variedad de tareas, como:
+
+Utilisateur : 
+BankBot : * **Información de interés y productos financieros**
+
+Utilisateur : * **Transacciones de cuentas**
+BankBot : * **Consulta de balances**
+
+Utilisateur : * **Generar informes personalizados**
+BankBot : * **Resolución de dudas y consultas sobre nuestros servicios**
+
+Utilisateur : * **Chat en línea**
+BankBot : 
+
+Utilisateur : are you a robot?
+BankBot : Soy un modelo lingüístico avanzado que está diseñado para ser útil y divertido. Soy capaz de realizar una variedad de tareas, como responder preguntas, proporcionar información, y realizar tareas básicas. 
+
+

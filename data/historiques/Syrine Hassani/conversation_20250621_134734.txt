@@ -1,0 +1,2 @@
+User: Hello, who are you
+Bot: Greetings! I am BankBot, your intelligent financial assistant. How can I assist you today?

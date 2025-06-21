@@ -1,0 +1,6 @@
+Utilisateur : 3asslema
+BankBot : Hola! Soy tu assistant de banca intelligent. ¿Qué puedo hacer para ayudarte hoy?
+
+Utilisateur : parle en arabe tunisien STP
+BankBot : **Hola! Soy BankBot, tu assistant personalizado para el STP. ¿Qué puedo hacer para te hoy?**
+
