@@ -1,12 +1,11 @@
 import streamlit as st
 from pages.home import home_page
-from pages.chat import chat_page
 from pages.history import history_page
 from pages.settings import settings_page
 from components.login import login_page
 from components.register import registration_page
 from services.auth_service import authenticate
-
+from pages.chat import chat_page
 
 st.set_page_config(page_title="BankBot Assistant", page_icon="🏦", layout="wide")
 
@@ -43,4 +42,8 @@ if "logged_in" not in st.session_state or not st.session_state.logged_in:
     else:
         login_page()
 else:
+    chatbot_page()
+
+
+if __name__ == "__main__":
     chatbot_page()

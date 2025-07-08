@@ -6,6 +6,13 @@ import streamlit as st
 CHATS_DIR = 'data/historiques'
 os.makedirs(CHATS_DIR, exist_ok=True)
 
+def extract_keywords(chat_log):
+    text = " ".join(q + " " + r for q, r in chat_log).lower()
+    words = re.findall(r"\\b\\w+\\b", text)
+    stopwords = {"le", "la", "les", "de", "des", "et", "à", "un", "une", "en", "du", "pour", "avec", "sur", "dans"}
+    keywords = [w for w in words if w not in stopwords]
+    return keywords[:3] if keywords else ["conversation"]
+
 def save_conversation(username, chat_log):
     user_dir = os.path.join("data/historiques", username)
     os.makedirs(user_dir, exist_ok=True)
@@ -27,13 +34,6 @@ def save_conversation(username, chat_log):
         for question, response in chat_log:
             f.write(f"User: {question}\n")
             f.write(f"Bot: {response}\n")
-
-def extract_keywords(chat_log):
-    text = " ".join(q + " " + r for q, r in chat_log).lower()
-    words = re.findall(r"\\b\\w+\\b", text)
-    stopwords = {"le", "la", "les", "de", "des", "et", "à", "un", "une", "en", "du", "pour", "avec", "sur", "dans"}
-    keywords = [w for w in words if w not in stopwords]
-    return keywords[:3] if keywords else ["conversation"]
 
 def get_conversations(username):
     if not os.path.exists(CHATS_DIR):
