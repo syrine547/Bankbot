@@ -6,7 +6,7 @@ def init_db():
         conn = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="2807",  
+            password="MySQL123!",  
             database="bankbot_db"
         )
         cursor = conn.cursor()

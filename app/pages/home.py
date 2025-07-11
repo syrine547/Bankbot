@@ -3,6 +3,12 @@ from services.chat_service import get_conversations
 # from services.db_service import get_user_info  # à activer si tu ajoutes cette fonction
 
 def home_page():
+    st.sidebar.markdown("---")
+    if st.sidebar.button("🚪 Se déconnecter", key="logout_btn_home"):
+        st.session_state.logged_in = False
+        st.session_state.username = None
+        st.success("Déconnexion réussie !")
+        st.rerun()
     st.title("🏠 Accueil")
     st.markdown("Bienvenue dans **BankBot**, votre assistant bancaire intelligent.")
 

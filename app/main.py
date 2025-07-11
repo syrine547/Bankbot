@@ -5,9 +5,12 @@ from pages.settings import settings_page
 from components.login import login_page
 from components.register import registration_page
 from services.auth_service import authenticate
-from pages.chat import chat_page
 
+# ⛳ MUST BE FIRST STREAMLIT COMMAND
 st.set_page_config(page_title="BankBot Assistant", page_icon="🏦", layout="wide")
+
+# Now it's safe to import other modules
+from pages.chat import chat_page
 
 def chatbot_page():
     if "language" not in st.session_state:
@@ -22,7 +25,7 @@ def chatbot_page():
     
     with st.sidebar:
         st.markdown("<div class='sidebar-title'>🔧 Navigation</div>", unsafe_allow_html=True)
-        selection = st.radio("Aller à :", list(menu_labels.keys()), key="nav", label_visibility="collapsed")
+        selection = st.radio("Aller à :", list(menu_labels.keys()), key="nav_main", label_visibility="collapsed")
         section = menu_labels[selection]
     
     if section == "Accueil":
@@ -46,4 +49,4 @@ else:
 
 
 if __name__ == "__main__":
-    chatbot_page()
+    pass  # Prevent duplicate call to chatbot_page()

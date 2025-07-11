@@ -29,17 +29,47 @@ def save_conversation(username, chat_log):
 
     filepath = os.path.join(user_dir, filename)
 
+
     # Sauvegarde la conversation complète (écrase à chaque fois)
     with open(filepath, "w", encoding="utf-8") as f:
         for question, response in chat_log:
             f.write(f"User: {question}\n")
             f.write(f"Bot: {response}\n")
 
+    # Sauvegarde dans la base de données MySQL
+    from services.db_service import init_db
+    conn = init_db()
+    if conn is not None:
+        cursor = conn.cursor()
+        # Récupérer l'id utilisateur
+        cursor.execute("SELECT id FROM users WHERE username = %s", (username,))
+        user_row = cursor.fetchone()
+        if user_row:
+            user_id = user_row[0]
+            # Insérer chaque message dans chat_history
+            for question, response in chat_log:
+                cursor.execute(
+                    "INSERT INTO chat_history (user_id, user_message, bot_response) VALUES (%s, %s, %s)",
+                    (user_id, question, response)
+                )
+            conn.commit()
+        conn.close()
+
 def get_conversations(username):
     if not os.path.exists(CHATS_DIR):
         return []
-    files = [f for f in os.listdir(CHATS_DIR) if f.startswith(username)]
-    return sorted(files, reverse=True)
+    user_dir = os.path.join(CHATS_DIR, username)
+    conversations = []
+    # Fichiers à la racine
+    for f in os.listdir(CHATS_DIR):
+        if f.startswith(username) and f.endswith('.txt'):
+            conversations.append(f)
+    # Fichiers dans le dossier utilisateur
+    if os.path.isdir(user_dir):
+        for f in os.listdir(user_dir):
+            if f.endswith('.txt'):
+                conversations.append(os.path.join(username, f))
+    return sorted(conversations, reverse=True)
 
 def generate_title_from_content(content):
     content_lower = content.lower()
