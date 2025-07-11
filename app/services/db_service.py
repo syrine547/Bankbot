@@ -1,18 +1,35 @@
-import sqlite3
-import os
-
-DB_PATH = 'data/users.db'
+import mysql.connector
+from mysql.connector import errorcode
 
 def init_db():
-    os.makedirs("data", exist_ok=True)
-    conn = sqlite3.connect(DB_PATH)
-    cursor = conn.cursor()
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS users (
-            id INTEGER PRIMARY KEY,
-            username TEXT UNIQUE,
-            password TEXT
+    try:
+        conn = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="2807",  
+            database="bankbot_db"
         )
-    ''')
-    conn.commit()
-    return conn
+        cursor = conn.cursor()
+
+        # Create users table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS users (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                username VARCHAR(255) UNIQUE NOT NULL,
+                password VARCHAR(255) NOT NULL
+            )
+        ''')
+
+        # You can create other tables similarly here...
+
+        conn.commit()
+        return conn
+
+    except mysql.connector.Error as err:
+        if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+            print("Something is wrong with your user name or password")
+        elif err.errno == errorcode.ER_BAD_DB_ERROR:
+            print("Database does not exist")
+        else:
+            print(err)
+    return None
