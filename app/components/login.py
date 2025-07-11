@@ -2,6 +2,7 @@ import streamlit as st
 from services.auth_service import authenticate
 
 def login_page():
+    st.image("app/assets/bankbot_logo.png", width=120)
     st.title("🔐 Connexion")
     username = st.text_input("Nom d'utilisateur")
     password = st.text_input("Mot de passe", type="password")
